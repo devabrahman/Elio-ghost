@@ -9,7 +9,7 @@ module.exports = {
       },
 
       colors: {
-        theme_overlay: "#00000050",
+        theme_overlay: "#00000080",
       },
     },
   },

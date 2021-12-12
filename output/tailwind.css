@@ -635,6 +635,10 @@ video {
   max-width: 72rem;
 }
 
+.max-w-5xl {
+  max-width: 64rem;
+}
+
 .items-end {
   align-items: flex-end;
 }
@@ -648,7 +652,7 @@ video {
 }
 
 .bg-theme_overlay {
-  background-color: #00000050;
+  background-color: #00000080;
 }
 
 .bg-hero-pattern {
@@ -671,9 +675,68 @@ video {
   padding-bottom: 0.25rem;
 }
 
+.pt-52 {
+  padding-top: 13rem;
+}
+
+.pt-12 {
+  padding-top: 3rem;
+}
+
+.pt-10 {
+  padding-top: 2.5rem;
+}
+
+.pt-4 {
+  padding-top: 1rem;
+}
+
+.pt-48 {
+  padding-top: 12rem;
+}
+
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.leading-4 {
+  line-height: 1rem;
+}
+
+.leading-relaxed {
+  line-height: 1.625;
+}
+
+.leading-normal {
+  line-height: 1.5;
+}
+
+.leading-tight {
+  line-height: 1.25;
+}
+
+.leading-snug {
+  line-height: 1.375;
 }
 
 .text-white {
@@ -691,8 +754,4 @@ video {
 
 .zIndex-1 {
   z-index: -1;
-}
-
-.themeOverlay {
-  background-color: "#00000050";
 }
