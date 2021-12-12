@@ -7,6 +7,10 @@ module.exports = {
       backgroundImage: {
         "hero-pattern": "url('../src/img/bg.png')",
       },
+
+      colors: {
+        theme_overlay: "#00000050",
+      },
     },
   },
   variants: {

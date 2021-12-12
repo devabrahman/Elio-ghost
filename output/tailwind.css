@@ -647,9 +647,8 @@ video {
   gap: 4rem;
 }
 
-.bg-gray-400 {
-  --tw-bg-opacity: 1;
-  background-color: rgba(156, 163, 175, var(--tw-bg-opacity));
+.bg-theme_overlay {
+  background-color: #00000050;
 }
 
 .bg-hero-pattern {
@@ -682,10 +681,18 @@ video {
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
+.bg-blend-overlay {
+  background-blend-mode: overlay;
+}
+
 .primary_fonts {
   font-family: "Poppins", sans-serif;
 }
 
 .zIndex-1 {
   z-index: -1;
+}
+
+.themeOverlay {
+  background-color: "#00000050";
 }
