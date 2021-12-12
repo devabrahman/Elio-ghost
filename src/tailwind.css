@@ -8,3 +8,10 @@
 .zIndex-1 {
   z-index: -1;
 }
+.topVh_85 {
+  top: 90vh;
+}
+
+.slider_single {
+  @apply bg-theme_overlay bg-blend-overlay bg-cover bg-center pt-48 absolute top-0 left-0 w-full h-screen;
+}

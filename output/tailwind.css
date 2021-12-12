@@ -595,20 +595,12 @@ video {
   display: none;
 }
 
-.absolute {
-  position: absolute;
-}
-
 .relative {
   position: relative;
 }
 
-.top-0 {
-  top: 0px;
-}
-
-.left-0 {
-  left: 0px;
+.bottom-0 {
+  bottom: 0px;
 }
 
 .z-10 {
@@ -619,16 +611,20 @@ video {
   margin: auto;
 }
 
+.inline-block {
+  display: inline-block;
+}
+
 .flex {
   display: flex;
 }
 
-.h-screen {
-  height: 100vh;
+.h-1 {
+  height: 0.25rem;
 }
 
-.w-full {
-  width: 100%;
+.w-10 {
+  width: 2.5rem;
 }
 
 .max-w-6xl {
@@ -651,48 +647,34 @@ video {
   gap: 4rem;
 }
 
-.bg-theme_overlay {
-  background-color: #00000080;
+.gap-8 {
+  gap: 2rem;
 }
 
-.bg-hero-pattern {
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.bg-\[\#00FF29\] {
+  --tw-bg-opacity: 1;
+  background-color: rgba(0, 255, 41, var(--tw-bg-opacity));
+}
+
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgba(255, 255, 255, var(--tw-bg-opacity));
+}
+
+.bg-slider-img-1 {
   background-image: url('../src/img/bg.png');
-}
-
-.bg-cover {
-  background-size: cover;
-}
-
-.bg-center {
-  background-position: center;
-}
-
-.p-52 {
-  padding: 13rem;
 }
 
 .pb-1 {
   padding-bottom: 0.25rem;
 }
 
-.pt-52 {
-  padding-top: 13rem;
-}
-
-.pt-12 {
-  padding-top: 3rem;
-}
-
 .pt-10 {
   padding-top: 2.5rem;
-}
-
-.pt-4 {
-  padding-top: 1rem;
-}
-
-.pt-48 {
-  padding-top: 12rem;
 }
 
 .text-sm {
@@ -705,11 +687,6 @@ video {
   line-height: 1;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
-
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -719,33 +696,13 @@ video {
   font-weight: 600;
 }
 
-.leading-4 {
-  line-height: 1rem;
-}
-
-.leading-relaxed {
-  line-height: 1.625;
-}
-
 .leading-normal {
   line-height: 1.5;
-}
-
-.leading-tight {
-  line-height: 1.25;
-}
-
-.leading-snug {
-  line-height: 1.375;
 }
 
 .text-white {
   --tw-text-opacity: 1;
   color: rgba(255, 255, 255, var(--tw-text-opacity));
-}
-
-.bg-blend-overlay {
-  background-blend-mode: overlay;
 }
 
 .primary_fonts {
@@ -754,4 +711,21 @@ video {
 
 .zIndex-1 {
   z-index: -1;
+}
+
+.topVh_85 {
+  top: 90vh;
+}
+
+.slider_single {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100vh;
+  width: 100%;
+  background-color: #00000080;
+  background-size: cover;
+  background-position: center;
+  padding-top: 12rem;
+  background-blend-mode: overlay;
 }
