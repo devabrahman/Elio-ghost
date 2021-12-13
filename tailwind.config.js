@@ -4,6 +4,9 @@ module.exports = {
   darkMode: "media", // or 'media' or 'class'
   theme: {
     extend: {
+      container: {
+        center: true,
+      },
       backgroundImage: {
         "slider-img-1": "url('../src/img/bg.png')",
       },
