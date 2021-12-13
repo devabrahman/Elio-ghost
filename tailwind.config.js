@@ -10,6 +10,7 @@ module.exports = {
 
       colors: {
         theme_overlay: "#00000080",
+        accent_color: "#00FF29",
       },
     },
   },

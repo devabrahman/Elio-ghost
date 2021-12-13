@@ -17,9 +17,9 @@
 
 <body class="primary_fonts">
     <header class="relative">
-        <nav class="flex items-end max-w-6xl m-auto justify-between text-white text-sm z-10">
+        <nav class="flex items-end max-w-6xl m-auto justify-between text-white text-sm z-10 pt-4">
             <ul class="flex justify-between gap-16">
-                <li><a href=" ">Home</a></li>
+                <li class=""><a href="" class=" transition hover:text-accent_color">Home</a></li>
                 <li><a href=" ">Style Guide</a></li>
             </ul>
             <a href="" class="logo"><img src="./src/img/logo.png" alt=""></a>
@@ -27,8 +27,8 @@
                 <li><a href="">Registration</a></li>
                 <li><a href="">Login</a></li>
                 <div class="flex text-sm gap-16 items-end pb-1">
-                    <span class="far fa-moon"></span>
-                    <span class="fas fa-search"></span>
+                    <span class="far fa-moon  transition hover:text-accent_color cursor-pointer"></span>
+                    <span class=" fas fa-search transition hover:text-accent_color cursor-pointer"></span>
                 </div>
             </ul>
         </nav>
@@ -49,16 +49,27 @@
                         Aliquet quis commodo, vulputate pellentesque accumsan
                     </h4>
                 </div>
+                <!-- single Slider End -->
             </div>
 
-            <!-- single Slider End -->
+            <!-- Start Slider Pagination -->
             <div class="max-w-5xl m-auto relative bottom-0 topVh_85 flex gap-8">
-                <span class="w-10 h-1 bg-[#00FF29] rounded-xl inline-block"></span>
-                <span class="w-10 h-1 bg-white rounded-xl inline-block"></span>
-                <span class="w-10 h-1 bg-white rounded-xl inline-block"></span>
-                <span class="w-10 h-1 bg-white rounded-xl inline-block"></span>
-                <span class="w-10 h-1 bg-white rounded-xl inline-block"></span>
+                <span class="w-10 h-1 bg-accent_color rounded-xl inline-block"></span>
+                <span
+                    class="w-10 h-1 bg-white transition hover:bg-accent_color active:bg-accent_color  cursor-pointer rounded-xl inline-block">
+                </span>
+                <span
+                    class="w-10 h-1 bg-white transition hover:bg-accent_color active:bg-accent_color  cursor-pointer rounded-xl inline-block">
+                </span>
+                <span
+                    class="w-10 h-1 bg-white transition hover:bg-accent_color active:bg-accent_color  cursor-pointer rounded-xl inline-block">
+                </span>
+                <span
+                    class="w-10 h-1 bg-white transition hover:bg-accent_color active:bg-accent_color  cursor-pointer rounded-xl inline-block">
+                </span>
+
             </div>
+            <!-- End Slider Pagination -->
         </div>
 
     </header>
