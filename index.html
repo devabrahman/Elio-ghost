@@ -18,39 +18,44 @@
 <body class="primary_fonts">
     <header class="relative">
         <nav class=" container flex items-end justify-between text-white text-sm z-10 pt-4">
-            <ul class="flex justify-between gap-16">
+            <ul class="hidden sm:flex justify-between gap-16">
                 <li class=""><a href="" class=" transition hover:text-accent_color">Home</a></li>
                 <li><a href=" ">Style Guide</a></li>
             </ul>
+            <div class="flex sm:hidden  justify-start">
+                <i class="fas fa-bars"></i>
+            </div>
             <a href="" class="logo"><img src="./src/img/logo.png" alt=""></a>
-            <ul class="flex gap-16">
-                <li><a href="">Registration</a></li>
-                <li><a href="">Login</a></li>
+            <div class="flex gap-16">
+                <ul class="gap-16 hidden sm:flex ">
+                    <li><a href="">Registration</a></li>
+                    <li><a href="">Login</a></li>
+                </ul>
+                <div class="flex sm:hidden justify-start order-last">
+                    <i class="fas fa-user"></i>
+                </div>
                 <div class="flex text-sm gap-16 items-end pb-1">
                     <span class="far fa-moon  transition hover:text-accent_color cursor-pointer"></span>
                     <span class=" fas fa-search transition hover:text-accent_color cursor-pointer"></span>
                 </div>
-            </ul>
+            </div>
+
         </nav>
         <div class="slider">
             <!-- single Slider Start -->
             <div class="slider_single zIndex-1 bg-slider-img-1">
                 <div class="container px-10 text-white">
-                    <h1 class=" text-5xl font-semibold leading-normal ">Lorem ipsum dolor sit
-                        amet,
-                        consectetur
-                        adipiscing elit.
-                        Amet rutrum nam
+                    <h1 class=" text-5xl font-semibold leading-normal ">Lorem ipsum dolor sit amet, consectetur
+                        adipiscing elit. Amet rutrum nam
                         <br>consequat eu tempus
                     </h1>
                     <h4 class="text-xl pt-10">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu ornare imperdiet cras sed eleifend
-                        eu.
-                        Aliquet quis commodo, vulputate pellentesque accumsan
+                        eu. Aliquet quis commodo, vulputate pellentesque accumsan
                     </h4>
                 </div>
-                <!-- single Slider End -->
             </div>
+            <!-- single Slider End -->
 
             <!-- Start Slider Pagination -->
             <div class="container px-10 relative bottom-0 topVh_85 flex gap-8">
