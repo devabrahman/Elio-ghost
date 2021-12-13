@@ -4,8 +4,7 @@
   "description": "this is the Titi header",
   "main": "index.js",
   "scripts": {
-    "build":"tailwindcss -i ./src/tailwind.css -o ./output/tailwind.css -w"
-    
+    "build": "tailwindcss -i ./src/tailwind.css -o ./output/tailwind.css -w"
   },
   "repository": {
     "type": "git",
@@ -17,5 +16,8 @@
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.4",
     "tailwindcss": "^2.2.19"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
   }
 }

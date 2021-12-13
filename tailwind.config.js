@@ -15,6 +15,9 @@ module.exports = {
         theme_overlay: "#00000080",
         accent_color: "#00FF29",
       },
+      screens: {
+        xsm: "320",
+      },
     },
   },
   variants: {

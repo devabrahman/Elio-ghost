@@ -1,0 +1,20 @@
+// console.log("object");
+$(document).ready(function () {
+  $(".owl-carousel").owlCarousel({
+    items: 1,
+    loop: true,
+  });
+});
+
+// Hamberger Menu
+const hambergur = document.querySelector(".hambarger_nav");
+const hambergurClose = document.querySelector(".hambarger_nav > i");
+
+const nave_menu = document.querySelector(".nav_menu");
+hambergur.addEventListener("click", () => {
+  nave_menu.classList.toggle("side_nav");
+  hambergur.classList.toggle("nav_open");
+  hambergurClose.classList.toggle("fa-times");
+
+  console.log("object");
+});
