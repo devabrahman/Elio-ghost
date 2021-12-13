@@ -21,7 +21,12 @@
 }
 .owl-dots {
   @apply absolute bottom-10  flex gap-8;
-  left: 5%;
+  left: 8%;
+}
+@media (min-width: 780px) {
+  .owl-dots {
+    left: 10%;
+  }
 }
 .owl-dot {
   @apply w-10 h-1 cursor-pointer rounded-xl;

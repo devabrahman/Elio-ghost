@@ -782,7 +782,13 @@ video {
   bottom: 2.5rem;
   display: flex;
   gap: 2rem;
-  left: 5%;
+  left: 8%;
+}
+
+@media (min-width: 780px) {
+  .owl-dots {
+    left: 10%;
+  }
 }
 
 .owl-dot {
@@ -857,6 +863,11 @@ video {
 }
 
 @media (min-width: 768px) {
+  .md\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
   .md\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
