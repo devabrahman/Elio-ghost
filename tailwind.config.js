@@ -9,6 +9,7 @@ module.exports = {
       },
       backgroundImage: {
         "slider-img-1": "url('../src/img/bg.png')",
+        "slider-img-2": "url('../src/img/bg-.jpg')",
       },
 
       colors: {
