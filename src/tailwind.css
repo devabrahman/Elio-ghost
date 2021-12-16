@@ -39,26 +39,15 @@
   background-color: #00ff29 !important;
 }
 .side_nav {
-  position: fixed;
+  @apply fixed bg-black left-0 top-0 h-screen w-screen pt-10 p-8 rounded-xl;
   display: block !important;
-  background: #000;
   opacity: 0.9;
-  left: 0;
-  top: 0;
-  height: 100vh;
-  width: 100vw;
-  padding: 30px;
-  padding-top: 40px;
   z-index: 9;
-  border-radius: 9%;
 }
 .side_nav li {
   padding-top: 30px;
 }
 .hambarger_nav.nav_open {
-  position: fixed;
+  @apply fixed text-white text-4xl right-1/2;
   z-index: 99;
-  color: white;
-  right: 50%;
-  font-size: 40px;
 }
