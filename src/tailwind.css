@@ -61,3 +61,15 @@
 .blog_row_flex_basis {
   flex: 1 1 580px;
 }
+/* blog single */
+.single_blog {
+  @apply bg-blog_img_1 bg-cover bg-center bg-no-repeat my-10 rounded text-white h-72 inline-flex flex-col justify-end p-5 transition-all;
+}
+.single_blog_category_btn {
+  @apply bg-accent_color text-black py-1 px-3 rounded-xl text-xs w-max font-roboto;
+}
+
+.line_height_social {
+  line-height: 0.8;
+  @apply rounded;
+}
