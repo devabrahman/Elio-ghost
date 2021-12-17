@@ -54,3 +54,10 @@
   @apply fixed text-white text-4xl right-1/2;
   z-index: 99;
 }
+.blog_flex_basis {
+  flex: 1 1 10%;
+  min-width: 300px;
+}
+.blog_row_flex_basis {
+  flex: 1 1 580px;
+}
