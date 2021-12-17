@@ -653,16 +653,47 @@ video {
   order: 9999;
 }
 
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .flex {
   display: flex;
+}
+
+.inline-flex {
+  display: inline-flex;
 }
 
 .hidden {
   display: none;
 }
 
+.h-72 {
+  height: 18rem;
+}
+
+.min-h-screen {
+  min-height: 100vh;
+}
+
+.w-max {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.max-w-screen-lg {
+  max-width: 1024px;
+}
+
 .cursor-pointer {
   cursor: pointer;
+}
+
+.flex-col {
+  flex-direction: column;
 }
 
 .items-end {
@@ -671,6 +702,10 @@ video {
 
 .justify-start {
   justify-content: flex-start;
+}
+
+.justify-end {
+  justify-content: flex-end;
 }
 
 .justify-between {
@@ -685,6 +720,23 @@ video {
   gap: 1rem;
 }
 
+.gap-10 {
+  gap: 2.5rem;
+}
+
+.rounded {
+  border-radius: 0.25rem;
+}
+
+.rounded-xl {
+  border-radius: 0.75rem;
+}
+
+.bg-accent_color {
+  --tw-bg-opacity: 1;
+  background-color: rgba(0, 255, 41, var(--tw-bg-opacity));
+}
+
 .bg-slider-img-1 {
   background-image: url('../src/img/bg.png');
 }
@@ -693,9 +745,44 @@ video {
   background-image: url('../src/img/bg-.jpg');
 }
 
+.bg-blog_img_1 {
+  background-image: url('../src/img/blog.jpg');
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
+.p-5 {
+  padding: 1.25rem;
+}
+
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .pt-4 {
@@ -708,6 +795,10 @@ video {
 
 .pt-10 {
   padding-top: 2.5rem;
+}
+
+.font-roboto {
+  font-family: "Roboto",sans-serif;
 }
 
 .text-sm {
@@ -725,8 +816,17 @@ video {
   line-height: 1.5rem;
 }
 
+.text-xs {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
 .font-semibold {
   font-weight: 600;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .leading-normal {
@@ -738,6 +838,11 @@ video {
   color: rgba(255, 255, 255, var(--tw-text-opacity));
 }
 
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgba(0, 0, 0, var(--tw-text-opacity));
+}
+
 .transition {
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
   transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
@@ -745,6 +850,12 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
+
+/* font Family  */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+/* cusotm fonts  */
 
 .primary_fonts {
   font-family: "Poppins", sans-serif;
