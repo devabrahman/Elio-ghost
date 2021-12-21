@@ -73,3 +73,7 @@
   line-height: 0.8;
   @apply rounded;
 }
+.single_blog:hover .social_icon {
+  @apply mb-0 visible opacity-100;
+  transition: all linear.3s;
+}
