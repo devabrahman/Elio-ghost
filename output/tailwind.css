@@ -776,6 +776,22 @@ video {
   background-image: url('../src/img/bg-.jpg');
 }
 
+.bg-blog_img_1 {
+  background-image: url('../src/img/blogs/blog.jpg');
+}
+
+.bg-blog_img_2 {
+  background-image: url('../src/img/blogs/blog-2.jpg');
+}
+
+.bg-blog_img_3 {
+  background-image: url('../src/img/blogs/blog-3.jpg');
+}
+
+.bg-blog_img_4 {
+  background-image: url('../src/img/blogs/blog-4.jpg');
+}
+
 .px-5 {
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -983,7 +999,6 @@ video {
   flex-direction: column;
   justify-content: flex-end;
   border-radius: 0.25rem;
-  background-image: url('../src/img/blog.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
