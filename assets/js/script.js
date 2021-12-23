@@ -1,4 +1,3 @@
-// console.log("object");
 $(document).ready(function () {
   $(".owl-carousel").owlCarousel({
     items: 1,
@@ -17,6 +16,4 @@ hambergur.addEventListener("click", () => {
   nave_menu.classList.toggle("side_nav");
   hambergur.classList.toggle("nav_open");
   hambergurClose.classList.toggle("fa-times");
-
-  console.log("object");
 });
