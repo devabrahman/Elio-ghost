@@ -63,7 +63,7 @@
 }
 /* blog single */
 .single_blog {
-  @apply bg-cover bg-center bg-no-repeat ;
+  @apply bg-cover bg-center bg-no-repeat;
 }
 .single_blog_category_btn {
   @apply bg-accent_color text-black py-1 px-3 rounded-xl text-xs w-max font-roboto;
@@ -76,4 +76,8 @@
 .single_blog:hover .social_icon {
   @apply mb-0 visible opacity-100;
   transition: all linear.3s;
+}
+.categories {
+  box-shadow: 0px 4px 4px rgba(135, 206, 235, 0.25);
+  
 }
