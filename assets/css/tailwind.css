@@ -807,6 +807,10 @@ video {
   max-height: 92px;
 }
 
+.max-h-20 {
+  max-height: 5rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -1500,6 +1504,10 @@ video {
     padding-right: 8rem;
   }
 
+  .md\:pt-0 {
+    padding-top: 0px;
+  }
+
   .md\:text-left {
     text-align: left;
   }
@@ -1534,6 +1542,10 @@ video {
 
   .lg\:w-4\/12 {
     width: 33.333333%;
+  }
+
+  .lg\:pt-0 {
+    padding-top: 0px;
   }
 
   .lg\:text-left {
