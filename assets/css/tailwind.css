@@ -811,6 +811,14 @@ video {
   max-height: 5rem;
 }
 
+.max-h-1 {
+  max-height: 0.25rem;
+}
+
+.max-h-16 {
+  max-height: 4rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -917,6 +925,11 @@ video {
 
 .gap-20 {
   gap: 5rem;
+}
+
+.gap-x-12 {
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
 }
 
 .self-end {
