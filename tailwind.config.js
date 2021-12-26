@@ -9,7 +9,7 @@ module.exports = {
       },
       backgroundImage: {
         "slider-img-1": "url('../img/bg.png')",
-        "slider-img-2": "url('../img/bg-.jpg')",
+        "slider-img-2": "url('../img/bg-.jpg') ",
       },
       colors: {
         theme_overlay: "#00000080",
@@ -19,6 +19,7 @@ module.exports = {
         xsm: "320",
       },
       fontFamily: {
+        roboto: ['"Roboto",sans-serif'],
         roboto: ['"Roboto",sans-serif'],
       },
     },

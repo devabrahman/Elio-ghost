@@ -69,6 +69,16 @@
 .single_blog {
   @apply bg-cover bg-center bg-no-repeat;
 }
+.single_blog::after {
+  @apply absolute w-full h-full left-0 top-0;
+  content: "";
+  background: linear-gradient(
+    0deg,
+    rgba(1, 0, 6, 0.2) 24%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 212, 255, 0) 100%
+  );
+}
 .single_blog_category_btn {
   @apply bg-accent_color text-black py-1 px-3 rounded-xl text-xs w-max font-roboto;
 }

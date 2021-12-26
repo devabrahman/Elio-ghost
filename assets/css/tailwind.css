@@ -960,7 +960,7 @@ video {
 }
 
 .bg-slider-img-2 {
-  background-image: url('../img/bg-.jpg');
+  background-image: url('../img/bg-.jpg') ;
 }
 
 .bg-gradient-to-b {
@@ -1281,6 +1281,21 @@ video {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+.single_blog::after {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background: linear-gradient(
+    0deg,
+    rgba(1, 0, 6, 0.2) 24%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 212, 255, 0) 100%
+  );
 }
 
 .single_blog_category_btn {
