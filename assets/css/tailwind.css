@@ -1454,6 +1454,14 @@ video {
     margin-right: 2.5rem;
   }
 
+  .xl\:w-auto {
+    width: auto;
+  }
+
+  .xl\:self-end {
+    align-self: flex-end;
+  }
+
   .xl\:pt-0 {
     padding-top: 0px;
   }
