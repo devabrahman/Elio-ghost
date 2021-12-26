@@ -18,10 +18,14 @@
 .slider_single {
   @apply bg-theme_overlay bg-blend-overlay bg-cover bg-center pt-36 md:pt-48  w-full h-screen bg-no-repeat;
 }
+.slider_single h1 {
+  line-height: 1.3 !important;
+}
 .slider {
   @apply top-0 left-0;
   position: absolute I !important;
 }
+
 .owl-dots {
   @apply absolute bottom-10  flex gap-8;
   left: 8%;
@@ -79,5 +83,4 @@
 }
 .categories {
   box-shadow: 0px 4px 4px rgba(135, 206, 235, 0.25);
-  
 }
