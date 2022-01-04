@@ -744,6 +744,10 @@ video {
   margin-top: 3.5rem;
 }
 
+.block {
+  display: block;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -1387,7 +1391,7 @@ video {
 }
 
 .single_blog_page_basis {
-  flex: 1 1 35%;
+  flex: 1 1 25%;
 }
 
 .hover\:text-accent_color:hover {
