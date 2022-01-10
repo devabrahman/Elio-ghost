@@ -63,13 +63,14 @@
 
 
         <!-- single Slider Start -->
-        <div class="container px-8 md:px-32 text-white  self-end z-10 pb-16">
+        <div
+            class="container px-8 md:px-32 text-white  self-end z-10 pb-16 xl:absolute xl:left-1/2 xl:top-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2">
             <h1 class="text-2xl md:text-4xl xl:text-[57px] font-semibold md:leading-[1.3] ">Lorem
                 Top 10 place to travel with your family and enjoy and amazing time
             </h1>
-            <h4 class="text-base md:text-lg xl:text-xl pt-10 font-light inline-flex items-center">
-                Ajmin Pradhan <span class="w-2 h-2 rounded-full mx-4 bg-white"></span>
-                3 min reading
+            <h4 class="text-base md:text-lg xl:text-xl pt-10 font-light inline-flex items-center capitalize">
+                Ajmin Pradhan <span class="w-2 h-2 rounded-full mx-4 bg-white lowercase"></span>
+                <span class="lowercase">3 min reading</span>
             </h4>
             <div class=" pt-[56px] flex gap-4">
                 <a href="" class=" inline-block ">
@@ -96,15 +97,12 @@
     </header>
 
     <!-- Poster aria Start -->
-    <section class="container  flex flex-wrap p-3 sm:p-10 mt-16">
-        <!-- blog part start -->
-        <div class=" mr-1 xl:mr-10 px-4 sm:px-10  blog_row_flex_basis text-justify md:text-left">
 
-            <p class="text-[#2b2b2b] text-[18px] pb-16 leading-[31px]">Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit. Orci
-                tortor
-                massa
-                pharetra vestibulum. In
+    <section class="container flex p-3 sm:p-10 flex-wrap mt-16 ">
+        <!-- Full blog part start -->
+        <div class=" mr-1 xl:mr-16 flex-wrap blog_row_flex_basis ">
+            <p class="text-[#2b2b2b] text-[18px] pb-16 leading-[31px] text-justify">Lorem ipsum dolor sit amet
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci tortor massa pharetra vestibulum. In
                 viverra nunc quam id lorem condimentum mauris nunc. Nulla suspendisse facilisis vehicula amet sed neque
                 cras ac pulvinar. Urna mollis adipiscing sit vitae. Duis aenean at at integer hac egestas. Sed laoreet
                 lacus, semper aliquam et condimentum condimentum diam. Neque, turpis eget accumsan orci. Faucibus odio
@@ -125,9 +123,9 @@
 
 
         </div>
-        <!-- blog part End -->
+        <!-- Full blog part End  -->
         <!-- side bar start -->
-        <div class="sm:min-w-[80%]  lg:min-w-[33%] sm:mr-auto sm:ml-auto pt-8 lg:pt-0 single_blog_page_basis">
+        <div class="lg:w-4/12 sm:w-10/12 sm:mr-auto sm:ml-auto pt-8 lg:pt-0">
             <!-- Recent Post Start -->
             <div>
                 <h4
@@ -136,68 +134,50 @@
                 </h4>
                 <!-- Single Recent Posts Start -->
                 <div class="flex justify-between w-full bg-white rounded-2xl gap-5 mt-4 p-3 Single_blog_box_shadow">
-                    <img class="  max-h-[92px] w-1/4 rounded object-cover self-center "
+                    <img class="max-h-[85px] w-1/4 rounded-xl object-cover self-center "
                         src=" ./assets/img/blogs/blog.jpg" alt="Block Images">
-                    <div class="flex flex-col gap-2 w-3/4">
+                    <div class="flex flex-col gap-2 w-3/4 ">
                         <h3 class="font-medium text-[15px] ">10 Amazing places to visit with your family in your free
                             time
                         </h3>
-                        <div class="flex gap-2 items-center text-[#C2C2C2] text-sm pt-4">
+                        <div class="flex gap-2 items-center text-[#C2C2C2] text-sm pt-3">
                             <p class=" ">Ajmin Pradhan</p>
                             <span class="w-1 h-1 bg-[#C2C2C2] rounded-full"></span>
                             <p class="">3 min reading</p>
                         </div>
                     </div>
                 </div>
-                <!-- Single Recent Posts Start -->
-                <!-- Single Recent Posts Start -->
-                <div class="flex justify-between w-full bg-white rounded-2xl gap-5 mt-4 p-3 Single_blog_box_shadow">
-                    <img class="  max-h-[92px] w-1/4 rounded object-cover self-center "
-                        src=" ./assets/img/blogs/blog.jpg" alt="Block Images">
-                    <div class="flex flex-col gap-2 w-3/4">
-                        <h3 class="font-medium text-[15px] ">10 Amazing places to visit with your family in your free
-                            time
-                        </h3>
-                        <div class="flex gap-2 items-center text-[#C2C2C2] text-sm pt-4">
-                            <p class=" ">Ajmin Pradhan</p>
-                            <span class="w-1 h-1 bg-[#C2C2C2] rounded-full"></span>
-                            <p class="">3 min reading</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Single Recent Posts Start -->
+                <!-- Single Recent Posts End -->
 
-
-                <!-- Single Recent Posts End  -->
             </div>
             <!-- Recent Post Start -->
 
             <!-- Catoryies Start -->
-            <div class="categoryies mt-14 boxshadow">
+            <div class="categoryies mt-14 rounded-3xl">
                 <h4
-                    class="text-xl font-medium bg-white py-3 pl-2 w-full border-b-8 border-solid border-yellow-500 rounded-xl boxshadow ">
-                    Categoryies
+                    class="text-xl font-medium bg-white boxshadow py-3 pl-2 w-full border-b-8 border-solid border-yellow-500 rounded-xl boxshadow">
+                    categoryies post
                 </h4>
                 <!-- Single Recent Post -->
-                <div class="bg-white mt-4 p-4 boxshadow rounded-2xl">
-                    <ul class="">
-                        <li class="mt-4 bg-[#FFFBF0] w-full rounded-xl ">
-                            <a href="" class="flex justify-between font-medium text-[15px] items-center px-4 py-2">
-                                Travel <span class="py-[2px] px-1 bg-[#FFCA42] rounded-3xl  text-xs">5</span>
-                            </a>
-                        </li>
-                        <li class="mt-4 bg-[#FFFBF0] w-full rounded-xl ">
-                            <a href="" class="flex justify-between font-medium text-[15px] items-center px-4 py-2">
-                                Travel <span class="py-[2px] px-1 bg-[#FFCA42] rounded-3xl  text-xs">5</span>
-                            </a>
-                        </li>
-                        <li class="mt-4 bg-[#FFFBF0] w-full rounded-xl ">
-                            <a href="" class="flex justify-between font-medium text-[15px] items-center px-4 py-2">
-                                Travel <span class="py-[2px] px-1 bg-[#FFCA42] rounded-3xl  text-xs">5</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="w-full bg-white rounded-2xl boxshadow mt-4 p-3">
+                    <li class=" bg-[#FFCA4214] rounded-xl my-2">
+                        <a href="" class="flex justify-between font-medium text-[15px] items-center px-4 py-2">
+                            Travel <span class="py-[4px] px-[10px] bg-[#FFCA42] rounded-3xl text-xs">5</span>
+                        </a>
+                    </li>
+                    <li class=" bg-[#FFCA4214] rounded-xl my-2">
+                        <a href="" class="flex justify-between font-medium text-[15px] items-center px-4 py-2">
+                            Travel <span class="py-[4px] px-[10px] bg-[#FFCA42] rounded-3xl text-xs">5</span>
+                        </a>
+                    </li>
+                    <li class=" bg-[#FFCA4214] rounded-xl my-2">
+                        <a href="" class="flex justify-between font-medium text-[15px] items-center px-4 py-2">
+                            Travel <span class="py-[4px] px-[10px] bg-[#FFCA42] rounded-3xl text-xs">5</span>
+                        </a>
+                    </li>
+
+                </ul>
+
             </div>
             <!-- Catoryies End -->
 

@@ -32,18 +32,30 @@
 }
 @media (min-width: 780px) {
   .owl-dots {
-    left: 10%;
+    width: 85%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+@media (min-width: 1400px) {
+  .owl-dots {
+    width: 1300px;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 .owl-dot {
   @apply w-10 h-1 cursor-pointer rounded-xl;
   background-color: #fff !important;
+  transition: all linear.3s;
 }
 .owl-dot:hover {
   background-color: #00ff29 !important;
+  @apply w-10 h-2;
 }
 .owl-dot.active {
   background-color: #00ff29 !important;
+  @apply w-11;
 }
 .side_nav {
   @apply fixed bg-black left-0 top-0 h-screen w-screen pt-10 p-8 rounded-xl;
