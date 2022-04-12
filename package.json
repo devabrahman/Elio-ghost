@@ -4,7 +4,7 @@
   "description": "this is the Titi header",
   "main": "index.js",
   "scripts": {
-    "build": "tailwindcss -i ./assets/css/app.css -o ./assets/css/tailwind.css -w"
+    "start": "tailwindcss -i ./assets/css/app.css -o ./assets/css/tailwind.css -w"
   },
   "repository": {
     "type": "git",
