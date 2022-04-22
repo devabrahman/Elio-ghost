@@ -4,7 +4,7 @@
 
 /* font Family  */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
-/* cusotm fonts  */
+/* custom fonts  */
 .primary_fonts {
   font-family: "Poppins", sans-serif;
 }
@@ -111,4 +111,10 @@
 }
 .single_blog_page_basis {
   flex: 1 1 25%;
+}
+
+/* Tags page  */
+.single-tag-box-shadow{
+  -webkit-box-shadow: 0px 8px 0px 0px rgba(243,175,24,0.92); 
+box-shadow: 0px 8px 0px 0px rgba(243,175,24,0.92);
 }
