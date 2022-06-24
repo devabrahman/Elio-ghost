@@ -1,23 +1,77 @@
 {
-  "name": "visioun",
-  "version": "1.0.0",
-  "description": "this is the Titi header",
-  "main": "index.js",
-  "scripts": {
-    "start": "tailwindcss -i ./assets/css/app.css -o ./assets/css/tailwind.css -w"
-  },
-  "repository": {
-    "type": "git",
-    "url": "titi theme"
-  },
-  "author": "visioun",
-  "license": "ISC",
-  "devDependencies": {
-    "autoprefixer": "^10.4.0",
-    "postcss": "^8.4.4",
-    "tailwindcss": "^2.2.19"
-  },
-  "dependencies": {
-    "jquery": "^3.6.0"
-  }
+   "name": "visioun",
+   "description": "Modern Blog & Newsletter theme for ghost publication",
+   "version": "1.0.0",
+   "main": "index.js",
+   "scripts": {
+      "start": "tailwindcss -i ./assets/css/app.css -o ./assets/css/tailwind.css -w"
+   },
+   "engines": {
+      "ghost": ">=5.0.0"
+   },
+   "repository": {
+      "type": "git",
+      "url": "titi theme"
+   },
+   "author": {
+      "name": "Visioun",
+      "email": "hello@visioun.com",
+      "url": "https://visioun.com"
+   },
+   "license": "ISC",
+   "devDependencies": {
+      "autoprefixer": "^10.4.0",
+      "postcss": "^8.4.4",
+      "tailwindcss": "^2.2.19"
+   },
+   "gpm": {
+      "type": "theme",
+      "categories": [
+         "Minimal",
+         "Personal Blog",
+         "Newsletter"
+      ]
+   },
+   "keywords": [
+      "ghost",
+      "theme",
+      "ghost-theme",
+      "personal",
+      "minimal",
+      "newsletter"
+   ],
+   "config": {
+      "card_assets": {
+         "exclude": [
+            "blockquote",
+            "bookmark",
+            "image",
+            "gallery"
+         ]
+      },
+      "posts_per_page": 12,
+      "image_sizes": {
+         "xxs": {
+            "width": 30
+         },
+         "xs": {
+            "width": 100
+         },
+         "s": {
+            "width": 300
+         },
+         "m": {
+            "width": 600
+         },
+         "l": {
+            "width": 1200
+         },
+         "xl": {
+            "width": 2000
+         }
+      }
+   },
+   "dependencies": {
+      "jquery": "^3.6.0"
+   }
 }

@@ -1,0 +1,29 @@
+{{!< default}} <section class="container flex p-3 sm:p-10 flex-wrap mt-16 ">
+    <!-- blog part start -->
+    <div class=" flex gap-x-12 mr-1 xl:mr-10 flex-wrap blog_row_flex_basis ">
+        {{#foreach posts}}
+
+        {{!-- partials/card.hbs --}}
+        {{> "card"}}
+        {{/foreach}}
+
+
+        <!-- Load More start -->
+     {{> "load-more"}}
+        <!-- Load More End -->
+
+    </div>
+    <!-- blog part End -->
+    <!-- side bar start -->
+    <div class="lg:w-4/12 sm:w-10/12 sm:mr-auto sm:ml-auto pt-8 lg:pt-0">
+        {{>"recent-post"}}
+
+        <!-- Categories List -->
+        {{>"post-category"}}
+
+        <!-- Newsletter Start -->
+        {{> "newsletter"}}
+        <!-- Newsletter End -->
+    </div>
+    <!-- Side bar End -->
+    </section>

@@ -1,0 +1,36 @@
+  <!-- Next and Previous Blog Start-->
+
+        <div class="flex justify-between gap-20">
+           {{#next_post}}
+          <a href="{{url}}" class="w-1/2 flex gap-3">
+            <img class="w-4" src="{{asset 'img/arrow.svg'}}" alt="" />
+            <div class="flex gap-3">
+               {{#if feature_image}}
+              <img
+                class="w-1/2 h-16 object-cover rounded"
+                src="{{feature_image}} "
+                alt="{{title}} "
+              />
+              {{/if}}
+              <p class="text-lg" href="#">{{title}}</p>
+            </div>
+          </a>
+          {{/next_post}}
+            {{#prev_post}}
+          <a href="{{url}}" class="w-1/2 flex gap-3">
+            <div class="flex gap-3">
+              <p class="text-lg" href="#">T{{title}}</p>
+                {{#if feature_image}}
+              <img
+                class="w-1/2 h-16 object-cover rounded"
+                src="{{feature_image}}"
+                alt="{{title}}"
+              />
+              {{/if}}
+            </div>
+            <img class="w-4 rotate-180" src="{{ asset 'img/arrow.svg'}}" alt="" />
+          </a>
+ {{/prev_post}}
+        </div>
+
+      </div>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="{{@site.locale}}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Css -->
+    <link rel="stylesheet" href="{{asset "css/all.min.cs"}}s">
+    <link rel="stylesheet" href="{{asset "css/owl.carousel.min.css"}}">
+    <link rel="stylesheet" href="{{asset "css/elio-ghost.css"}}">
+    <link rel="stylesheet" href="{{asset "css/tailwind.css"}}">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Title -->
+
+
+    <title>{{meta_title}}</title>
+    {{ghost_head}}
+</head>
+{{#is 'home'}}
+{{> "home-hero"}}
+{{/is}}
+{{#is "author"}}
+{{> "side-author-header" }}
+{{/is}}
+{{#is "tag"}}
+{{> "side-header" }}
+{{/is}}
+
+
+
+<body class="primary_fonts bg-white/60  {{body_class}}{{{block " body_class"}}}">
+
+    {{{body}}}
+
+    <!-- blog aria Start -->
+
+
+    <!-- blog aria End -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/app.js"></script>
+    {{> "side-footer"}}
+    {{ghost_foot}}
+</body>
+
+</html>

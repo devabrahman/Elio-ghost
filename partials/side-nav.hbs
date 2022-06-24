@@ -1,0 +1,64 @@
+<nav
+    class="container flex items-end justify-between px-5 sm:px-10 text-white text-sm z-10 pt-4 absolute left-1/2 -translate-x-2/4"
+>
+    <ul class="hidden sm:flex justify-between gap-16 nav_menu">
+        {{!-- {{#foreach navigation}}
+            <li class=""><a
+                    href="http://localhost:2368/"
+                    class="transition hover:text-accent_color"
+                >Home</a></li>
+        {{/foreach}} --}}
+        {{#foreach navigation}}
+            <li class=""><a
+                    href="{{url absolute="true"}}"
+                    class=""
+                >{{label}}</a></li>
+        {{/foreach}}
+        <li class="group relative hidden lg:inline-block">
+            <a href="./index.html">
+                <img
+                    class="pt-1"
+                    src="{{asset 'img/Dropdown-menu.png'}}"
+                    alt=""
+                />
+            </a>
+            <ul
+                class="hidden group-hover:inline-block absolute -top-2 left-1/2 translate-x-[-50%] bg-gray-600/20 p-6 rounded-md"
+            >
+                <li class="">
+                    <a
+                        href="./tags.html"
+                        class="transition hover:text-accent_color inline-block"
+                    >Tag</a>
+                </li>
+                <li class="">
+                    <a
+                        href="./autor.html"
+                        class="transition hover:text-accent_color pt-2 inline-block"
+                    >Author</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <div class="flex sm:hidden justify-start hambarger_nav">
+        <i class="fas fa-bars"></i>
+    </div>
+    <a href="" class="logo"><img src="{{asset 'img/logo.png'}}" alt="" /></a>
+    <div class="flex sm:gap-12 gap-4">
+        <ul class="gap-16 hidden sm:flex">
+            <li><a href="">Registration</a></li>
+            <li><a href="">Login</a></li>
+        </ul>
+        <div class="flex sm:hidden justify-start order-last">
+            <i class="fas fa-user"></i>
+        </div>
+        <div class="flex text-sm sm:gap-14 gap-4 items-end pb-1">
+            <span
+                class="far fa-moon transition hover:text-accent_color cursor-pointer"
+            ></span>
+            <span
+                class="fas fa-search transition hover:text-accent_color cursor-pointer"
+            ></span>
+        </div>
+    </div>
+</nav>

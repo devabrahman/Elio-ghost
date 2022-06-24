@@ -1,0 +1,26 @@
+<div class="categoryies mt-14 rounded-3xl">
+    <h4
+        class="text-xl font-medium bg-white boxshadow py-3 pl-2 w-full border-b-8 border-solid border-yellow-500 rounded-xl boxshadow">
+        Post Categories
+    </h4>
+    <!-- Single Recent Post -->
+    {{!-- <ul class="w-full bg-white rounded-2xl boxshadow mt-4 p-3">
+        {{#foreach tags visibility="all"}}
+        <li class=" bg-[#FFCA4214] rounded-xl my-2">
+            <a href="" class="flex justify-between font-medium text-[15px] items-center px-4 py-2">
+                hello<span class="py-[4px] px-[10px] bg-[#FFCA42] rounded-3xl text-xs">5</span>
+            </a>
+        </li>
+        {{/foreach}}
+
+    </ul> --}}
+    {{#if tags}}
+    <ul>
+        {{#foreach tags}}
+        <li>
+            <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}}</a>
+        </li>
+        {{/foreach}}
+    </ul>
+    {{/if}}
+</div>
