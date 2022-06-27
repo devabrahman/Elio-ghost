@@ -1,19 +1,10 @@
 <nav
     class="container flex items-end justify-between px-5 sm:px-10 text-white text-sm z-10 pt-4 absolute left-1/2 -translate-x-2/4"
 >
-    <ul class="hidden sm:flex justify-between gap-16 nav_menu">
-        {{!-- {{#foreach navigation}}
-            <li class=""><a
-                    href="http://localhost:2368/"
-                    class="transition hover:text-accent_color"
-                >Home</a></li>
-        {{/foreach}} --}}
-        {{#foreach navigation}}
-            <li class=""><a
-                    href="{{url absolute="true"}}"
-                    class=""
-                >{{label}}</a></li>
-        {{/foreach}}
+    <ul id="top-navbar" class="hidden sm:flex justify-between gap-16 nav_menu">
+
+        {{navigation}}
+
         <li class="group relative hidden lg:inline-block">
             <a href="./index.html">
                 <img
@@ -22,6 +13,7 @@
                     alt=""
                 />
             </a>
+
             <ul
                 class="hidden group-hover:inline-block absolute -top-2 left-1/2 translate-x-[-50%] bg-gray-600/20 p-6 rounded-md"
             >
@@ -43,11 +35,21 @@
     <div class="flex sm:hidden justify-start hambarger_nav">
         <i class="fas fa-bars"></i>
     </div>
-    <a href="" class="logo"><img src="{{asset 'img/logo.png'}}" alt="" /></a>
+    <a href="" class="logo">
+        {{#if @site.log}}
+            <img
+                src="{{@side.logo}}"
+                alt="{{@site.title}}"
+                class="light-logo"
+            />
+        {{else}}
+            <h2 class="">{{@site.title}}</h2>
+        {{/if}}
+    </a>
     <div class="flex sm:gap-12 gap-4">
         <ul class="gap-16 hidden sm:flex">
-            <li><a href="">Registration</a></li>
-            <li><a href="">Login</a></li>
+            <li><a href="javascript:" data-portal="signup">Registration</a></li>
+            <li><a href="javascript:" data-portal="signin">Login</a></li>
         </ul>
         <div class="flex sm:hidden justify-start order-last">
             <i class="fas fa-user"></i>
@@ -62,3 +64,10 @@
         </div>
     </div>
 </nav>
+<script>
+    const topNav= document.querySelectorAll("#top-navbar li" );
+    if(topNav.length<=2){ console.log("it's less that 2") }else
+    if(topNav.length>=2){ console.log("it's more that 2") }
+    {{!  }}
+    const arr= topNav.forEach(add=>console.log(add)); console.log(topNav.key())
+</script>

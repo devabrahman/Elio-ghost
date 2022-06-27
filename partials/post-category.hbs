@@ -1,6 +1,7 @@
 <div class="categoryies mt-14 rounded-3xl">
     <h4
-        class="text-xl font-medium bg-white boxshadow py-3 pl-2 w-full border-b-8 border-solid border-yellow-500 rounded-xl boxshadow">
+        class="text-xl font-medium bg-white boxshadow py-3 pl-2 w-full border-b-8 border-solid border-yellow-500 rounded-xl boxshadow"
+    >
         Post Categories
     </h4>
     <!-- Single Recent Post -->
@@ -14,13 +15,17 @@
         {{/foreach}}
 
     </ul> --}}
-    {{#if tags}}
-    <ul>
-        {{#foreach tags}}
-        <li>
-            <a href="{{url}}" title="{{name}}" class="tag tag-{{id}} {{slug}}">{{name}}</a>
-        </li>
-        {{/foreach}}
-    </ul>
-    {{/if}}
+    {{#get "tags" limit="all"}}
+        <ul>
+            {{#foreach tags}}
+                <li>
+                    <a
+                        href="{{url}}"
+                        title="{{name}}"
+                        class="tag tag-{{id}} {{slug}}"
+                    >{{name}}</a>
+                </li>
+            {{/foreach}}
+        </ul>
+    {{/get}}
 </div>

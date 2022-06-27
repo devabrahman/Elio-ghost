@@ -8,12 +8,9 @@
         <ul
             class="flex gap-4 justify-center md:gap-20 font-semibold text-lg flex-wrap"
         >
-            {{#foreach navigation}}
-                <li class=""><a
-                        href="{{url absolute="true"}}"
-                        class=""
-                    >{{label}}</a></li>
-            {{/foreach}}
+            {{navigation}}
+            <li class=""><a href="{{url absolute="true"}}" class="">
+                    Copyright © Elio</a></li>
         </ul>
     </div>
     <p
