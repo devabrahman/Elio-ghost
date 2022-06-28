@@ -1,3 +1,35 @@
-{{#foreach navigation}}
+{{#if isSecondary}}
+<ul class="flex gap-4 justify-center md:gap-20 font-semibold text-lg flex-wrap"  role="menu">
+     {{#foreach navigation}}
+    <li class=""><a href="{{url}}" class="" role="menuitem">{{label}}</a></li>
+    {{/foreach}}
+</ul>
+{{else}}
+
+
+{{#foreach navigation to="2"}}
     <li class=""><a href="{{url}}" class="">{{label}}</a></li>
 {{/foreach}}
+{{#foreach navigation from="3"}}
+ {{#if @first}}
+    <li class="group relative hidden lg:inline-block">
+        <a href="">
+            <img class="pt-1" src="{{asset 'img/Dropdown-menu.png'}}" alt="" />
+        </a>
+
+        <ul
+            class="hidden group-hover:inline-block absolute -top-2 left-1/2 translate-x-[-50%] bg-gray-600/20 p-6 rounded-md"
+        >
+        {{/if}}
+            <li class="py-2">
+                <a
+                    href="{{url}}"
+                    class="transition hover:text-accent_color inline-block"
+                >{{label}}</a>
+            </li>
+                 {{#if @last}}
+          </ul>
+    </li>
+    {{/if}}
+{{/foreach}}
+{{/if}}

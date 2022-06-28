@@ -5,7 +5,7 @@
         Post Categories
     </h4>
     <!-- Single Recent Post -->
-    {{#get "tags" limit="5"}}
+    {{#get "tags" limit="5" include="count.posts"}}
         <ul class="w-full bg-white rounded-2xl boxshadow mt-4 p-3">
             {{#foreach tags}}
                 <li class="bg-[#FFCA4214] rounded-xl my-2">
@@ -18,7 +18,7 @@
                     >
                         {{name}}<span
                             class="py-[4px] px-[10px] bg-[#FFCA42] rounded-3xl text-xs"
-                        >5</span>
+                        > {{count.posts}}</span>
                     </a>
                 </li>
             {{/foreach}}
