@@ -5,27 +5,33 @@
         Post Categories
     </h4>
     <!-- Single Recent Post -->
-    {{!-- <ul class="w-full bg-white rounded-2xl boxshadow mt-4 p-3">
-        {{#foreach tags visibility="all"}}
-        <li class=" bg-[#FFCA4214] rounded-xl my-2">
-            <a href="" class="flex justify-between font-medium text-[15px] items-center px-4 py-2">
-                hello<span class="py-[4px] px-[10px] bg-[#FFCA42] rounded-3xl text-xs">5</span>
-            </a>
-        </li>
-        {{/foreach}}
-
-    </ul> --}}
-    {{#get "tags" limit="all"}}
-        <ul>
+    {{#get "tags" limit="5"}}
+        <ul class="w-full bg-white rounded-2xl boxshadow mt-4 p-3">
             {{#foreach tags}}
-                <li>
+                <li class="bg-[#FFCA4214] rounded-xl my-2">
                     <a
                         href="{{url}}"
                         title="{{name}}"
-                        class="tag tag-{{id}} {{slug}}"
-                    >{{name}}</a>
+                        class="tag-{{id}}
+                            {{slug}}
+                            flex justify-between font-medium text-[15px] items-center px-4 py-2"
+                    >
+                        {{name}}<span
+                            class="py-[4px] px-[10px] bg-[#FFCA42] rounded-3xl text-xs"
+                        >5</span>
+                    </a>
                 </li>
             {{/foreach}}
+
         </ul>
     {{/get}}
+
+    <ul>
+
+        <li>
+            <a href="" class="tag"></a>
+        </li>
+
+    </ul>
+
 </div>

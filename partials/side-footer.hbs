@@ -1,6 +1,12 @@
 <footer class="container p-10 flex justify-between py-10 flex-wrap">
     <div class="order-2 lg:order-1 flex gap:1 lg:block">
-        <img src="./assets/img/logo.png" alt="" />
+        <a href="{{@site.url}}">
+        {{#if @site.logo}}
+            <img src="{{@site.logo}}" alt="alt="{{@site.title}}"" />
+        {{else}}
+            <h2 class="text-2xl">{{@site.title}}</h2>
+        {{/if}}
+        </a>
         <p class="pt-8 text-base">Copyright &copy;
             <span class="font-semibold">Elio</span></p>
     </div>
@@ -9,8 +15,7 @@
             class="flex gap-4 justify-center md:gap-20 font-semibold text-lg flex-wrap"
         >
             {{navigation}}
-            <li class=""><a href="{{url absolute="true"}}" class="">
-                    Copyright © Elio</a></li>
+
         </ul>
     </div>
     <p

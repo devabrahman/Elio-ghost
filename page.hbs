@@ -1,4 +1,58 @@
 {{!< default}}
 {{#post}}
-    Hello world
+<header class="shadow min-h-[60vh] relative flex flex-col justify-between bg-black/50 ">
+       {{#if feature_image}}
+        <img src="{{feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+            class=" absolute w-full h-[60vh] left-0 bottom-0 object-cover z-[-1]">
+        {{/if}}
+        {{> "side-nav"}}
+
+        <!-- single Slider Start -->
+        <div
+            class="container text-center mt-[10vh] px-8 md:px-32 text-white  self-end z-10 pb-16 xl:absolute xl:left-1/2 xl:top-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2">
+            <h1 class=" text-xl md:text-4xl xl:text-[58px] font-semibold md:leading-[1] ">
+                {{title}}
+            </h1>
+            {{#if feature_image_caption}}
+                    
+           
+            <h4 class="text-base md:text-lg xl:text-xl pt-3 font-light inline-flex items-center capitalize">
+               {{feature_image_caption}}
+            </h4>
+                 {{/if}}
+
+        </div>
+
+        
+    </header>
+
+
+
+<section class="container flex p-3 sm:p-10 flex-wrap mt-16">
+      <!-- Full blog part start -->
+      <div class="mr-1 xl:mr-16 flex-wrap blog_row_flex_basis blog-content">
+        <p class="text-[#2b2b2b] text-[18px] pb-16 leading-[31px] text-justify ">
+          {{content}}
+        </p>
+        </div>
+
+      <!-- side bar start -->
+      <div class="lg:w-4/12 sm:w-10/12 sm:mr-auto sm:ml-auto pt-8 lg:pt-0">
+        <!-- Recent Post Start -->
+      {{> "recent-post"}}
+        <!-- Recent Post Start -->
+
+        <!-- Categories Start -->
+      {{> "post-category"}}
+        <!-- Categories End -->
+
+        <!-- Newsletter Start -->
+       {{> "newsletter"}}
+        <!-- Newsletter End -->
+      </div>
+      <!-- Side bar End -->
+
+    </section>
+
+ 
 {{/post}}
