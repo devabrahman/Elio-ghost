@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Css -->
-    <link rel="stylesheet" href="{{asset "css/all.min.cs"}}s">
+    <link rel="stylesheet" href="{{asset "css/all.min.css"}}">
     <link rel="stylesheet" href="{{asset "css/owl.carousel.min.css"}}">
     <link rel="stylesheet" href="{{asset "css/elio-ghost.css"}}">
     <link rel="stylesheet" href="{{asset "css/tailwind.css"}}">
@@ -19,6 +19,22 @@
 
 
     <title>{{meta_title}}</title>
+    <script>
+        var pagination_next_page_number = '{{ pagination.next }}',
+            pagination_available_pages_number = '{{ pagination.pages }}',
+            api_url = '{{@site.url}}';
+    </script>
+    
+    <script>
+        if (typeof (Storage) !== 'undefined') {
+            if (localStorage.getItem('selected-theme') == 'light') {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+            else if (localStorage.getItem('selected-theme') == 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        }
+    </script>
     {{ghost_head}}
 </head>
 {{#is 'home'}}
@@ -42,8 +58,8 @@
 
     <!-- blog aria End -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="./assets/js/owl.carousel.min.js"></script>
-    <script src="./assets/js/app.js"></script>
+    <script src={{asset "js/owl.carousel.min.js"}}></script>
+    <script src={{asset "js/app.js"}}></script>
     {{> "side-footer"}}
     {{ghost_foot}}
 </body>
