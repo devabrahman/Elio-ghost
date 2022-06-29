@@ -76,7 +76,7 @@
                 >
                     <a href="" class="inline-block">
                         <img
-                            src="{{asset"img/Facebook.png"}}"
+                            src="{{asset "img/Facebook.png"}}"
                             class="h-8 align-middle"
                             alt=""
                         />
@@ -84,7 +84,7 @@
 
                     <a href="" class="inline-block">
                         <img
-                            src="{{asset"img/Twitter.png"}}"
+                            src="{{asset "img/Twitter.png"}}"
                             class="h-8 align-middle"
                             alt=""
                         />
@@ -92,15 +92,14 @@
 
                     <a href="" class="inline-block">
                         <img
-                            src="{{"asset "img/Instagram.png""}}"
+                            src="{{asset "img/Instagram.png"}}"
                             class="h-8 align-middle"
-                            alt=""
-                        />
+                            alt=""                       />
                     </a>
 
                     <a href="" class="inline-block">
                         <img
-                            src="{{"asset"img/Snapchat.png""}}"
+                            src="{{asset "img/Snapchat.png"}}"
                             class="h-8 align-middle"
                             alt=""
                         />
@@ -113,11 +112,5 @@
 {{/get}}
     </div>
     <!-- blog part End -->
-    <!-- Load More start -->
-    <div class="w-full flex justify-center max-h-20">
-        <img
-            src="{{asset"img/loadmore.png"}}"
-            alt=""/>
-    </div>
-    <!-- Load More End -->
+    {{> "load-more"}}
 </section>
