@@ -1,0 +1,123 @@
+{{!< default}}
+{{#post}}
+
+    <header
+        class="min-h-[60vh] relative flex flex-col justify-between bg-black/50"
+    >
+        {{#if feature_image}}
+            <img
+                src="{{feature_image}}"
+                alt="{{title}} "
+                class="absolute w-full h-full left-0 bottom-0 object-cover z-[-1]"
+            />
+        {{/if}}
+        {{> "side-nav"}}
+
+        {{#if custom_excerpt}}
+            <p class="it-excerpt">{{custom_excerpt}}</p>
+        {{/if}}
+
+        <!-- Author Info -->
+        <div
+            class="container text-center mt-[10vh] px-8 md:px-32 text-white self-end z-10 pb-16 xl:absolute xl:left-1/2 xl:top-1/2 xl:-translate-x-1/2 xl:-translate-y-1/2"
+        >
+            <h1
+                class="text-2xl md:text-4xl xl:text-[57px] font-semibold md:leading-[1.3]"
+            >
+                {{title}}
+            </h1>
+            {{#if custom_excerpt}}
+                <h4
+                    class="text-base md:text-lg xl:text-xl pt-6 font-light inline-flex items-center capitalize"
+                >
+                    {{custom_excerpt}}
+                </h4>
+            {{/if}}
+
+        </div>
+    </header>
+{{/post}}
+<!-- Poster aria Start -->
+<!-- blog aria Start -->
+<section class="container flex p-3 sm:p-10 flex-wrap mt-16">
+    <!-- blog part start -->
+    <div
+        class="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-x-16 mr-1 flex-wrap blog_row_flex_basis"
+    >
+    {{#get "authors" limit="all" include="count.posts" order="count.posts desc"}}
+    {{#foreach authors}}
+      
+        <!-- single Author start -->
+        <div
+            class="single_blog relative rounded-2xl bg-gradient-to-b single-tag-box-shadow from-transparent to-[#0000002e] w-full h-[463px] mb-14 overflow-hidden"
+        >
+            <img
+                class="rounded-2xl w-full h-full z-[-1] object-cover"
+                src="{{#if profile_image}}{{profile_image}}{{else}}{{asset "img/card-bg.jpg"}}{{/if}} "
+                alt="{{title}}"
+            />
+            <div
+                class="overflow-hidden inline-flex flex-col justify-end p-5 text-white blog_flex_basis group hover:shadow-xl absolute left-0 bottom-0 z-10"
+            >
+                <a href="" class="single_blog_category_btn capitalize">{{count.posts}} Post</a>
+                <a href="{{url}}" title="{{name}}" class="">
+                    <h3 class="text-2xl font-bold py-2">{{ name }} </h3>
+                </a>
+                <div class="flex items-center gap-2 text-sm">
+                    {{#if bio}}
+                    <span class="lowercase">
+                       {{bio}}
+                    </span>
+                    {{/if}}
+                </div>
+                <!-- blog Social icon -->
+                <div
+                    class="social_icon text-2xl pt-2 invisible opacity-0 mb-[-55px]"
+                >
+                    <a href="" class="inline-block">
+                        <img
+                            src="{{asset"img/Facebook.png"}}"
+                            class="h-8 align-middle"
+                            alt=""
+                        />
+                    </a>
+
+                    <a href="" class="inline-block">
+                        <img
+                            src="{{asset"img/Twitter.png"}}"
+                            class="h-8 align-middle"
+                            alt=""
+                        />
+                    </a>
+
+                    <a href="" class="inline-block">
+                        <img
+                            src="{{"asset "img/Instagram.png""}}"
+                            class="h-8 align-middle"
+                            alt=""
+                        />
+                    </a>
+
+                    <a href="" class="inline-block">
+                        <img
+                            src="{{"asset"img/Snapchat.png""}}"
+                            class="h-8 align-middle"
+                            alt=""
+                        />
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- single Author end -->
+        {{/foreach}}
+{{/get}}
+    </div>
+    <!-- blog part End -->
+    <!-- Load More start -->
+    <div class="w-full flex justify-center max-h-20">
+        <img
+            src="{{asset"img/loadmore.png"}}"
+            alt=""/>
+    </div>
+    <!-- Load More End -->
+</section>
