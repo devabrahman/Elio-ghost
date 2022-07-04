@@ -1,40 +1,53 @@
-{{!-- <nav class="pagination" role="navigation">
-    {{#if prev}}
-    <a class="newer-posts" href="{{page_url prev}}">&larr; Newer Posts</a>
-    {{/if}}
-    <span class="page-number">Page {{page}} of {{pages}}</span>
-    {{#if next}}
-    <a class="older-posts" href="{{page_url next}}">Older Posts &rarr;</a>
-    {{/if}}
-</nav> --}}
-
-{{!-- 
-<div id="load-more" class="w-full flex justify-center max-h-20 cursor-pointer"><img src="{{asset 'img/loadmore.png'}}"
-        alt="" /></div>
+         {{#if next}}
+  <div id="load-more" class="it-pagination lg:absolute lg:w-auto w-full text-center left-[30%] bottom-0">
+    <button class="it-load-posts it-button it-button-primary">
+     <img src="{{asset 'img/loadmore.png'}}"
+    </button>
+    
+  </div>
+{{/if}}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
-    // var pagination_next_url111 = $('link[rel=next]').attr('href'),
-    //   $load_posts_button = $('#load-more');
-    let pagination_next_url = document.querySelector("link[rel=next]").getAttribute('href'),
-        load_posts_button = document.querySelector('#load-more');
-    load_posts_button.addEventListener("click", (e) => {
-        e.preventDefault()
-     var request_next_link = pagination_next_url.split(/page/)[0] + 'page/' + pagination_next_page_number + '/';
+  // Load more
+    var pagination_next_url = $('link[rel=next]').attr('href');
+    var  $load_posts_button = $('.it-load-posts');
 
-        console.log(request_next_link)
-        fetch(request_next_link).then(res=>console.log(res))
-        .then(data=>console.log(data));
-         pagination_next_page_number++;
+    $load_posts_button.click(function (e) {
+      console.log("clicked");
+        e.preventDefault();
+
+        var request_next_link = pagination_next_url.split(/page/)[0] + 'page/' + pagination_next_page_number + '/';
+
+        $.ajax({
+            url: request_next_link,
+            beforeSend: function () {
+                {{!-- $load_posts_button.text('{{t "Loading"}}'); --}}
+                $load_posts_button.addClass('loading');
+            }
+        }).done(function (data) {
+            var posts = $('.post', data);
+
+            //$load_posts_button.text('{{t "Load More"}}');
+            $load_posts_button.removeClass('loading');
+
+            $('.it-postfeed').append(posts);
+         //   var lazyLoadInstance = new LazyLoad({
+          //      elements_selector: ".lazy",
+          //      use_native: true
+         //   });
+
+            pagination_next_page_number++;
+
+            // If you are on the last pagination page, add the disabled attribute
+            if (pagination_next_page_number > pagination_available_pages_number) {
+                $load_posts_button.attr('disabled', true);
+            }
+        });
 
     });
 
-</script> --}}
-{{#if next}}
-  <div class="it-pagination">
-    <button class="it-load-posts it-button it-button-primary">
-      {{t "Load More"}}
-    </button>
-  </div>
-{{/if}}
+</script>
+
 
 <script>
    

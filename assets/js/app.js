@@ -21,38 +21,38 @@ $(document).ready(function () {
   //   hambergurClose.classList.toggle("fa-times");
 });
 
-  // Load more
-    var pagination_next_url = document.querySelector('link[rel=next]').getAttribute('href'),
-        $load_posts_button  = document.querySelector('.it-load-posts');
+  // // Load more
+  //   var pagination_next_url = document.querySelector('link[rel=next]').getAttribute('href'),
+  //       $load_posts_button  = document.querySelector('.it-load-posts');
 
-    $load_posts_button.click(function(e) {
-        e.preventDefault();
+  //   $load_posts_button.click(function(e) {
+  //       e.preventDefault();
 
-        var request_next_link = pagination_next_url.split(/page/)[0] + 'page/' + pagination_next_page_number + '/';
+  //       var request_next_link = pagination_next_url.split(/page/)[0] + 'page/' + pagination_next_page_number + '/';
 
-        $.ajax({
-        url: request_next_link,
-        beforeSend: function() {
-            $load_posts_button.text('{{t "Loading"}}');
-            $load_posts_button.addClass('loading');
-        }
-        }).done(function(data) {
-            var posts = $('.post', data);
+  //       $.ajax({
+  //       url: request_next_link,
+  //       beforeSend: function() {
+  //           $load_posts_button.text('{{t "Loading"}}');
+  //           $load_posts_button.addClass('loading');
+  //       }
+  //       }).done(function(data) {
+  //           var posts = $('.post', data);
 
-            $load_posts_button.text('{{t "Load More"}}');
-            $load_posts_button.removeClass('loading');
+  //           $load_posts_button.text('{{t "Load More"}}');
+  //           $load_posts_button.removeClass('loading');
 
-                console.log(posts)
-            $('.it-postfeed').append(posts);
+  //               console.log(posts)
+  //           $('.it-postfeed').append(posts);
 
            
 
-            pagination_next_page_number++;
+  //           pagination_next_page_number++;
 
-            // If you are on the last pagination page, add the disabled attribute
-            if (pagination_next_page_number > pagination_available_pages_number) {
-                $load_posts_button.attr('disabled', true);
-            }
-        });
+  //           // If you are on the last pagination page, add the disabled attribute
+  //           if (pagination_next_page_number > pagination_available_pages_number) {
+  //               $load_posts_button.attr('disabled', true);
+  //           }
+  //       });
         
-    });
+  //   });

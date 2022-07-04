@@ -1,13 +1,27 @@
 
 {{!< default}}
 
-<section class="page error">
-    <div class="container">
-        <section class="error-content">
+    <header
+        class="min-h-[15vh] relative flex flex-col justify-between bg-black/50"
+    >
+                   <img
+                src="{{asset "img/card-bg.jpg"}}"
 
-            <h1 class="error-code">{{statusCode}}</h1>
-            <p class="error-description text-[87px]">{{message}}</p>
-            <p class="error-link"><a href="{{@site.url}}">Go to the front page →</a></p>
+                alt="{{title}} "
+                class="absolute w-full h-full left-0 bottom-0 object-cover z-[-1]"
+            />
+       
+        {{> "side-nav"}}
+
+        
+    </header>
+<section class="py-10">
+    <div class="container">
+        <section class=" text-center ">
+
+            <h1 class="error-code text-[87px] text-red-700">{{statusCode}}</h1>
+            <p class="error-description text-3xl">{{message}}</p>
+            <p class="mt-20 border-2 w-max p-2 rounded-xl m-auto"><a href="{{@site.url}}">Go to the front page →</a></p>
 
             {{#if errorDetails}}
             <section class="error-stack">

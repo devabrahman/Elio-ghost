@@ -67,7 +67,7 @@
 </header>
 
 <!-- blog aria Start -->
-<main class="container flex p-3 sm:p-10 flex-wrap mt-2 sm:mt-12">
+<main class="container relative flex p-3 sm:p-10 flex-wrap mt-2 sm:mt-12">
     <!-- blog part start -->
     <div class="flex gap-x-12 mr-1 xl:mr-10 flex-wrap blog_row_flex_basis">
         {{#foreach posts}}
@@ -75,16 +75,11 @@
             {{/foreach}}
         
 
-        <!-- Load More start -->
-        <div class="w-full flex justify-center max-h-20"><img
-                src="{{asset "img/loadmore.png"}}"
-                alt=""
-            /></div>
-        <!-- Load More End -->
+      
 
     </div>
     <!-- blog part End -->
-    <!-- side bar start -->
+    {{pagination}}
     <div class="lg:w-4/12 sm:w-10/12 sm:mr-auto sm:ml-auto pt-8 lg:pt-0">
 
         <!-- Recent Post Start -->
