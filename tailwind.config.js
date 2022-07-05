@@ -9,7 +9,7 @@ module.exports = {
             },
             colors: {
                 theme_overlay: "#00000080",
-                accent_color: "#00FF29",
+                accent_color: "var(--ghost-accent-color)"
             },
             screens: {
                 xsm: "320",

@@ -1,0 +1,103 @@
+<div class="v-search-box">
+	<a href="javascript:;" onclick="closeSearch();" class="v-close-button" id="searchClose" aria-label="Close search">
+		<button>Close</button>
+	</a>
+	<div class="v-search-inner">
+        <form class="v-search-form" id="search-form">
+            <div class="input-wrapper">
+                <input type="text" class="input" placeholder="{{t "Type to search"}}" id="searchInput" aria-label="{{t "Type to search"}}" role="searchbox">
+            </div>
+        </form>
+        <span class="v-search-close-text">{{t "Press ESC to close."}}</span>
+        <div class="search-result" id="searchResults"></div>
+	</div>
+</div>
+{{#if @custom.search_api_key}}
+    <script>
+        var searchApi = '{{@custom.search_api_key}}';
+    </script>
+{{/if}}
+
+<script>
+    
+// Search
+function search() {
+
+    var searchButton = document.querySelectorAll('.v-search-button');
+    var searchBox = document.querySelector('.v-search-box');
+    var searchClose = document.getElementById('searchClose');
+    var searchInput = document.getElementById('searchInput');
+    var searchResult = document.getElementById('searchResults');
+
+    if (typeof searchApi !== 'undefined' && searchApi != null && searchInput != null && searchButton) {
+        searchButton.forEach(function(sb) {
+            sb.addEventListener('click', function(e) {
+                e.preventDefault();
+                searchBox.classList.add('v-search-box-visible');
+                body.classList.add('v-search-opened');
+                body.classList.remove('canvas-opened');
+                window.setTimeout(function() {
+                    searchInput.focus();
+                }, 200);
+            })
+        });
+        var searchinGhost = new SearchinGhost({
+            key: searchApi,
+            version: 'v4',
+            inputId: ['searchInput'],
+            outputId: ['searchResults'],
+            outputChildsType: 'div',
+            limit: 10,
+            postsFields: ['title', 'url', 'excerpt', 'custom_excerpt', 'published_at'],
+            postsExtraFields: ['tags'],
+            template: function(post) {
+                var o = '';
+                o += '<a href="' + post.url + '">';
+                o += '<h3 class="v-search-title"><span>' + post.title + '</span></h3> <div class="v-search-meta">';
+                o += '<time>' + post.published_at + '</time></div></a>';
+                return o;
+            },
+            onSearchEnd: function(posts) {
+                if (searchResult.scrollHeight > searchResult.offsetHeight) {
+                    searchResult.style.paddingRight = "8px";
+                } else {
+                    searchResult.style.paddingRight = "0px";
+                }
+            }
+        });
+        document.addEventListener('keyup', function(e) {
+            if (e.keyCode == 27 && searchBox.classList.contains('v-search-box-visible') && body.classList.contains('v-search-opened')) {
+                closeSearch();
+            }
+        });
+        searchInput.addEventListener('keyup', function(e) {
+            if (e.keyCode == 27) {
+                closeSearch();
+            }
+        });
+        searchClose.addEventListener('keyup', function(e) {
+            if (e.keyCode == 13) {
+                closeSearch();
+            }
+        });
+        searchClose.addEventListener('keyup', function(e) {
+            if (e.keyCode == 13) {
+                closeSearch();
+            }
+        });
+        searchBox.onclick = closeSearch;
+        searchClose.onclick = closeSearch;
+
+        function closeSearch(e) {
+
+            if (e !== undefined && e.target !== e.currentTarget) {
+                return;
+            }
+            searchBox.classList.toggle('v-search-box-visible');
+            body.classList.toggle('v-search-opened');
+            searchInput.value = '';
+            searchResult.innerHTML = '';
+        }
+    }
+}
+</script>

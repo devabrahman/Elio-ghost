@@ -17,7 +17,7 @@
 .basic-text{
     @apply text-[#2b2b2b] text-[18px] leading-[31px] text-justify pb-4;
 }
-.two-line-title {
+.two-line-title,.excerpt-display {
     max-height: 76px;
     overflow: hidden;
     /* text-overflow: ellipsis; */
@@ -26,6 +26,15 @@
     line-clamp: 2;
     -webkit-box-orient: vertical;
 }
+.excerpt-display{    
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+}
+.owl-dot.active{
+    background-color:var(--ghost-accent-color) !important;
+}
+
+
 /* Basic Components End */
 .two-line-title.text-lg{
      max-height: 56px;
