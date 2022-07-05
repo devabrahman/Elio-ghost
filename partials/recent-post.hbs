@@ -3,12 +3,12 @@
 <div>
 
     <h4
-        class="text-xl font-medium bg-white boxshadow py-3 pl-2 w-full border-b-8 border-solid border-yellow-500 rounded-xl boxshadow">
+        class="text-xl font-medium dark:bg-gray-700 dark:text-white bg-white boxshadow py-3 pl-2 w-full border-b-8 border-solid border-yellow-500 rounded-xl boxshadow">
         Recent post
     </h4>
     <!-- Single Recent Posts Start -->
     {{#foreach posts limit="3" as | recent | }}
-    <div class="flex justify-between w-full bg-white rounded-2xl gap-5 mt-4 p-3 Single_blog_box_shadow">
+    <div class="flex justify-between w-full bg-white dark:bg-gray-700 dark:text-white rounded-2xl gap-5 mt-4 p-3 Single_blog_box_shadow ">
        <a href="{{url}}"  class="max-h-[85px] w-1/4"> 
      
         <img class="max-h-[100%] w-full rounded-xl object-cover self-center " src="  {{#if feature_image}}{{feature_image}} {{else}}  {{asset "img/card-bg.jpg"}}{{/if}}   "

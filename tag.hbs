@@ -1,18 +1,19 @@
 {{!< default}}
-<main class="container flex p-3 sm:p-10 flex-wrap mt-2 sm:mt-12">
+<main class="container relative flex p-3 sm:p-10 flex-wrap mt-2 sm:mt-12">
     <!-- blog part start -->
-    <div class="flex gap-x-12 mr-1 xl:mr-10 flex-wrap blog_row_flex_basis">
+    <div class="flex it-postfeed  gap-x-12 mr-1 xl:mr-10 flex-wrap blog_row_flex_basis">
         {{#foreach posts}}
             {{> "card"}} {{!-- partials/card.hbs --}}
             {{/foreach}}
         
 
-        <!-- Load More start -->
-        {{> "load-more"}}
-        <!-- Load More End -->
 
     </div>
     <!-- blog part End -->
+    
+        <!-- Load More start -->
+        {{pagination}}
+        <!-- Load More End -->
     <!-- side bar start -->
     <div class="lg:w-4/12 sm:w-10/12 sm:mr-auto sm:ml-auto pt-8 lg:pt-0">
 

@@ -6,17 +6,34 @@
     </h4>
     <!-- Single Recent Post -->
     <div class="bg-white rounded-2xl mt-4 p-2 boxshadow">
-        <form action="" class="flex justify-center items-center">
-            <input
-                class="w-10/12 p-3 bg-[#FFFBF0] rounded-[15px] mx-1 my-3 focus:outline-none"
-                type="email"
-                name=""
-                id=""
-                placeholder="Inter your email address..."
-            />
-            <button type="submit" class="w-12 h-10 bg-[#FFCA42] rounded-full"><i
-                    class="far fa-paper-plane text-lg"
-                ></i></button>
+        <form
+            action=""
+            data-members-form
+            
+        >
+            <div class="flex justify-center items-center">
+
+                <input
+                    data-members-email
+                    class="w-10/12 p-3 bg-[#FFFBF0] rounded-[15px] mx-1 my-3 focus:outline-none"
+                    type="email"
+                    name=""
+                    id=""
+                    placeholder="Inter your email address..."
+                />
+                <button
+                    type="submit"
+                    class="w-12 h-10 bg-[#FFCA42] rounded-full"
+                ><i class="far fa-paper-plane text-lg"></i></button>
+            </div>
+            <div
+                class="success"
+            >{{"Please check your inbox and click the link to confirm your subscription."}}</div>
+            <div
+                class="error"
+            >{{"An error occurred, please try again later."}}</div>
+
         </form>
+
     </div>
 </div>
