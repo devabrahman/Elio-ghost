@@ -175,15 +175,15 @@
 
 
 .blog-content h3{
-    @apply text-xl font-bold pb-4;
+    @apply text-xl font-bold pb-4 dark:text-white;
 
 }
 .blog-content h2{
-    @apply text-2xl font-bold pb-4;
+    @apply text-2xl font-bold pb-4 dark:text-white;
 
 }
 .blog-content p{
-    @apply basic-text;
+    @apply basic-text dark:text-white;
 }
 .kg-callout-card{
     @apply flex px-5 py-4 gap-3 text-lg rounded-md;

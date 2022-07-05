@@ -1,6 +1,6 @@
 {{!< default}}
 {{#post}}
-<header class="shadow min-h-[60vh] relative flex flex-col justify-between bg-black/50 ">
+<header class="shadow min-h-[60vh] relative flex flex-col justify-between bg-black/50 dark:bg-gray-800 ">
        {{#if feature_image}}
         <img src="{{feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
             class=" absolute w-full h-[60vh] left-0 bottom-0 object-cover z-[-1]">
@@ -31,7 +31,7 @@
 <section class="container flex p-3 sm:p-10 flex-wrap mt-16">
       <!-- Full blog part start -->
       <div class="mr-1 xl:mr-16 flex-wrap blog_row_flex_basis blog-content">
-        <p class="text-[#2b2b2b] text-[18px] pb-16 leading-[31px] text-justify ">
+        <p class="text-[#2b2b2b]  text-[18px] pb-16 leading-[31px] text-justify ">
           {{content}}
         </p>
         </div>

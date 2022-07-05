@@ -1,12 +1,12 @@
 <div class="categoryies mt-14 rounded-3xl">
     <h4
-        class="text-xl font-medium bg-white boxshadow py-3 pl-2 w-full border-b-8 border-solid border-yellow-500 rounded-xl boxshadow"
+        class="text-xl font-medium dark:bg-gray-700 dark:text-white bg-white boxshadow py-3 pl-2 w-full border-b-8 border-solid border-yellow-500 rounded-xl boxshadow"
     >
         Post Categories
     </h4>
     <!-- Single Recent Post -->
     {{#get "tags" limit="5" include="count.posts"}}
-        <ul class="w-full bg-white rounded-2xl boxshadow mt-4 p-3">
+        <ul class="w-full dark:bg-gray-700 dark:text-white bg-white rounded-2xl boxshadow mt-4 p-3">
             {{#foreach tags}}
                 <li class="bg-[#FFCA4214] rounded-xl my-2">
                     <a

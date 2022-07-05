@@ -1,14 +1,14 @@
 
 <!-- single blog start -->
 <article
-    class="{{post_class}} single_blog relative rounded-2xl bg-gradient-to-b from-transparent to-[#0000002e] w-full md:w-[45%] h-[463px] mb-14 overflow-hidden">
+    class="{{post_class}} single_blog relative rounded-2xl dark:shadow-xl shadow-inner dark:shadow-white/20 bg-gradient-to-b from-transparent to-[#0000002e] w-full md:w-[45%] h-[463px] mb-14 overflow-hidden">
 
     <img class="rounded-2xl w-full h-full z-[-1] object-cover" src="{{#if feature_image}} {{img_url feature_image size=" m"}} {{else}}  {{asset "img/card-bg.jpg"}}{{/if}}  "
         alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
 
 
     <div
-        class=" tex overflow-hidden inline-flex flex-col justify-end p-5 text-white blog_flex_basis group hover:shadow-xl absolute left-0 bottom-0 z-10">
+        class="overflow-hidden inline-flex flex-col justify-end p-5 text-white blog_flex_basis group hover:shadow-xl  absolute left-0 bottom-0 z-10">
 
         {{#if tags}}
       <div class="flex gap-3">
@@ -19,7 +19,7 @@
       
         {{/if}}
         <a href="{{url}}" class="">
-            <h3 class="text-2xl font-bold py-2 two-line-title text-pink-900">{{title}} </h3>
+            <h3 class="text-2xl font-bold py-2 two-line-title ">{{title}} </h3>
         </a>
 
         <div class="flex items-center gap-2 text-sm">
